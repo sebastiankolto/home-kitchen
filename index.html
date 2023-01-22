@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Handmade Kitchen</title>
+    <link rel="stylesheet" href="./style/style.css" />
+    <link rel="stylesheet" href="./style/splide.min.css" />
+    <link rel="icon" type="image/png" href="gallery/logo-black.svg" />
+    <meta
+      name="description"
+      content="Discover the beauty of a handmade kitchen"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <script src="https://kit.fontawesome.com/99e70a8b1e.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <!-- HEADER WITH NAVIGATION BAR -->
+    <header class="main-header" id="mainHeader">
+      <div class="navbar  wrapper" id="navbar">
+        
+        <!-- NAVBAR LEFT SIDE WITH SOCIAL MEDIA ICONS -->
+        <nav class="navbar__left">
+          <i class="navbar__ham" id="hamBtn">
+            <svg
+              version="1.1"
+              id="Layer_1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              x="0px"
+              y="0px"
+              viewBox="0 0 30 30"
+              style="enable-background: new 0 0 30 30"
+              xml:space="preserve"
+            >
+              <style type="text/css">
+                .st0 {
+                  fill: none;
+                  stroke-width: 1;
+                  stroke-linecap: round;
+                  stroke-miterlimit: 0;
+                }
+              </style>
+              <line class="st0" x1="2.6" y1="4.3" x2="27.2" y2="4.3" />
+              <line class="st0" x1="2.6" y1="15" x2="15" y2="15" />
+              <line class="st0" x1="2.6" y1="25.7" x2="27.2" y2="25.7" />
+            </svg>
+          </i>
+          <ul class="navbar__social-media">
+            <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
+            <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+            <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+          </ul>
+          <ul class="navbar__links">
+            <li><a href="#" class="navbar__link">Shop</a></li>
+            <li><a href="#" class="navbar__link">Plan my kitchen</a></li>
+          </ul>
+        </nav>
+
+        <!-- NAVBAR MIDDLE WITH LOGO -->
+        <div class="navbar__brand">
+          <a class="navbar__brand__link" href="#">
+            <img src="./gallery/logo.svg" alt="MHK company logo">
+          </a>
+        </div>
+      
+          
+        <!-- NAVBAR RIGHT WITH ADD TO CAR BUTTON -->
+        <nav class="navbar__right">
+            <ul class="navbar__links">
+              <li><a href="#" class="navbar__link">About us</a></li>
+              <li><a href="#" class="navbar__link">Gallery</a></li>
+            </ul>
+            <a href="#" class="btn shopping-cart__btn  alt-btn">
+                <span>My order</span>
+                <i class="fa-solid fa-cart-shopping"></i>
+            </a>  
+        </nav>
+      </div>
+    </header>
+    <!-- HIDDEN NAVIGATION BAR -->
+    <section class="navbar__hidden" id="hiddenMenu">
+      <div class="navbar__hidden__exit" id="exitMenu">
+        <span class="exit__icon"></span>
+      </div>
+      <nav>
+        <ul class="navbar__hidden__links">
+          <li><a href="" class="navbar__hidden__link">Shop</a></li>
+          <li><a href="" class="navbar__hidden__link">Plan my kitchen</a></li>
+          <li><a href="" class="navbar__hidden__link">About us</a></li>
+          <li><a href="" class="navbar__hidden__link">Gallery</a></li>
+        </ul>
+      </nav>
+      <ul class="navbar__hidden__social-media">
+        <li><a href=""><img src="gallery/facebook-icon.svg" alt="Facebook logo icon"></a></li>
+        <li><a href=""><img src="gallery/twitter-logo.svg" alt="Twitter logo icon"></a></li>
+        <li><a href=""><img src="gallery/instagram-logo.svg" alt="Instagram logo icon"></a></li>
+      </ul>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <main>
+        <section class="hero-section wrapper">
+          <!-- HERO SECTION TEXT AND BUTTON -->
+          <div class="hero-section__text">
+            <h6 class="hero__subheading">Design and order your new kitchen online today</h6>
+            <h1 class="hero__heading">Bespoke & made to measure handmade kitchen design</h1>
+            <a href="" class="btn  main-btn  main-btn--large">Order now</a>
+          </div>
+
+          <!-- SLIDESHOW IN THE BACKGROUND -->
+          <section class="slideshow">
+          
+            <section class="splide" aria-label="Kitchen images slideshow">
+              <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">                        
+                          <img src="gallery/kitchen.jpg" alt="Photo of a beautiful kitchen"> 
+                        </li>
+                        <li class="splide__slide">
+                          <img src="gallery/kitchen-6.jpg" alt="Photo of a beautiful kitchen" loading=”lazy”>
+                        </li>
+                        <li class="splide__slide">
+                          <img src="gallery/kitchen-7.jpg" alt="Photo of a beautiful kitchen" loading=”lazy”>
+                        </li>
+                    </ul>
+              </div>
+            </section>
+          </section>
+        </section>
+        
+        <!-- QUALITY CRAFTMANSHIP SECTION -->
+        <article class="full-width">
+          <figure class="quality-craftmanship__img  image-out">
+            <img src="gallery/kitchen-5.jpg" alt="Photo of a beautiful kitchen" loading=”lazy”>
+          </figure>
+          <section class="wrapper-reverse">
+            <div class="quality-craftmanship">
+              <div class="quality-craftmanship__text">
+                <h6 class="quality-craftmanship__subheading  text-out">
+                Quality craftmanship from build to delivery
+                </h6>
+                <h2 class="quality-craftmanship__heading  text-out">
+                  Discover the beauty of a handmade kitchen
+                </h2>
+                <p class="quality-craftmanship__paragraph  text-out">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eget est sit amet sapien venenatis maximus vel in urna. Nam mauris arcu, feugiat in finibus vitae, sollicitudin id purus. Ut imperdiet, magna eu pharetra tincidunt, mauris purus ultrices.</p>
+                <a href="" class="btn  main-btn  main-btn--large  qc-button-out">About us</a>
+              </div>
+            </div>
+            </section>
+        </article>
+        
+        <!-- REVIEW SECTION -->
+        <article class="review">
+          <section class="review__inner" id="reviewInner">
+            <h6 class="review__subheading">What our customers say</h6>
+            <div class="review__track-container" id="reviewTrackContainer">
+              <div class="review__track" id="reviewTrack">
+                <div class="review__content  reviewContent">
+                  <h3 class="review__heading">Over 35 years experience designing handmade kitchens</h3>
+                  <p class="review__text">Since my first contact I have received a very high level of customer service and advice with my kitchen plans. Ben responded very quickly to all of my emails and delivery of the kitchen was as planned.</p>
+                  <span class="review__author">Jane, Dundee</span>
+                </div>
+                <div class="review__content  reviewContent">
+                  <h3 class="review__heading">Over 25 years experience designing handmade kitchens</h3>
+                  <p class="review__text">Since my first contact I have received a very high level of customer service and advice with my kitchen plans. Ben responded very quickly to all of my emails and delivery of the kitchen was as planned.</p>
+                  <span class="review__author">Jane, Dundee</span>
+                </div>
+                <div class="review__content  reviewContent">
+                  <h3 class="review__heading">Over 15 years experience designing handmade kitchens</h3>
+                  <p class="review__text">Since my first contact I have received a very high level of customer service and advice with my kitchen plans. Ben responded very quickly to all of my emails and delivery of the kitchen was as planned.</p>
+                  <span class="review__author">Jane, Dundee</span>
+                </div>
+              </div>    
+            </div>
+            
+            <div class="review__arrows">
+              <button class="review__left-arrow" type="button" id="leftBtn">
+                <img src="gallery/left-arrow.svg" alt="Left arrow icon">
+              </button>
+              <button class="review__right-arrow" type="button" id="rightBtn">
+                <img src="gallery/right-arrow.svg" alt="Right arrow icon" >
+              </button>
+            </div>
+            <div class="review__slider--indicators">
+              <span class="indicator"></span>
+              <span class="indicator"></span>
+              <span class="indicator"></span>
+            </div>
+            <a href="" class="btn  main-btn  main-btn--large  faq-button">Frequently asked questions</a>
+            
+          </section>
+        </article>
+
+        <!-- GALLERY SECTION -->
+        <article class="wrapper gallery">
+          <h4>Customer Gallery</h4>          
+          <ul class="gallery__images" id="gallery thumbnails" class="thumbnails">
+            <li class="thumbnail">
+              <img src="gallery/kitchen-8.jpg"  alt="Image of a kitchen" loading=”lazy”>
+            </li> 
+            <li class="thumbnail">
+              <img src="gallery/kitchen-9.jpg"  alt="Image of a kitchen" loading=”lazy”>
+            </li> 
+            <li class="thumbnail">
+              <img src="gallery/kitchen-10.jpg"  alt="Image of a kitchen" loading=”lazy”>
+            </li> 
+            <li class="thumbnail">
+              <img src="gallery/kitchen-11.png"  alt="Image of a kitchen" loading=”lazy”>
+            </li> 
+            
+          </ul>
+          <a href="" class="btn  main-btn  main-btn--narrow">View more</a>
+
+          <!-- FULLSCREEN IMAGE -->
+          <div class="gallery__fullscreen hide-gallery" id="galleryFullscreen">
+            <div class="navbar__hidden__exit" id="exitFullscreenImg">
+              <span class="exit__icon"></span>
+            </div>
+      
+            <section id="main-carousel" class="splide splide-gallery" aria-label="My Awesome Gallery">
+              <div class="splide__track">
+                <ul class="splide__list">
+                  <li class="splide__slide">
+                    <img src="gallery/kitchen-8.jpg" alt="" class="splide-gallery__img">
+                  </li>
+                  <li class="splide__slide">
+                    <img src="gallery/kitchen-9.jpg" alt="" class="splide-gallery__img">
+                  </li>
+                  <li class="splide__slide">
+                    <img src="gallery/kitchen-10.jpg" alt="" class="splide-gallery__img">
+                  </li>
+                  <li class="splide__slide">
+                    <img src="gallery/kitchen-11.png" alt="" class="splide-gallery__img">
+                  </li>
+                </ul>
+              </div>
+            </section>
+            
+          </div>
+        </article> 
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="wrapper footer__inner">
+        <div class="footer__logo">
+          <span class="footer-logo-line"></span>
+          <img src="gallery/logo.svg" alt="Company logo">
+          <span class="footer-logo-line"></span>
+        </div>
+        <div class="footer__links">
+
+            <div class="footer__group">
+              <h4 class="footer__group__heading">About</h4>
+              <nav>
+                <a href="" class="footer__link">Shop</a>
+                <a href="" class="footer__link"> Plan my kitchen</a>
+                <a href="" class="footer__link">About us</a>
+                <a href="" class="footer__link">Gallery</a>
+              </nav>
+            </div>
+            <div class="footer__group">
+              <h4 class="footer__group__heading">Service</h4>
+              <nav>
+                <a href="" class="footer__link">Faq</a>
+                <a href="" class="footer__link">Contact</a>
+                <a href="" class="footer__link">How to buy</a>
+                <a href="" class="footer__link">Downloads</a>
+              </nav>
+            </div>
+            <div class="footer__group">
+              <h4 class="footer__group__heading">Info</h4>
+              <nav>
+                <a href="" class="footer__link">Delivery</a>
+                <a href="" class="footer__link">Terms</a>
+                <a href="" class="footer__link">Privacy</a>
+              </nav>
+            </div>
+            <div class="footer__group">
+              <h4 class="footer__group__heading">Follow</h4>
+              <div class="footer__social-media__icons">
+                <a href=""><img src="gallery/facebook-icon.svg" alt="Facebook logo icon"></a>
+                <a href=""><img src="gallery/twitter-logo.svg" alt="Twitter logo icon"></a>
+                <a href=""><img src="gallery/instagram-logo.svg" alt="Instagram logo icon"></a>
+              </div>
+
+          </div>
+          
+        </div>
+        
+        <p class="footer__copyright">Copyright Online MTC Home Kitchens 2018 - All rights reserved.
+            Responsive website design, Development & Hosting by mtc.
+        </p>
+        <span class="footer-logo-line"></span>     
+      </div>
+    </footer>
+  </body>
+
+  <!-- SCRIPT TAGS -->
+  <script src="./splide.min.js" type="module"></script>
+  <script src="./script.js" type="module"></script>
+  <script src="./gsap.min.js"></script>
+</html>

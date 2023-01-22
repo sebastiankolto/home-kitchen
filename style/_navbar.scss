@@ -1,0 +1,317 @@
+/*------------------------------------*\
+  MAIN NAVIGATION
+\*------------------------------------*/
+.main-header {
+    display: flex;
+    // IF WE HAVE FULL SCREEN HERO SECTION make position fixed
+    position:fixed;
+    justify-content: center;
+    width:100%;
+    z-index:10;
+    color:#fff;
+    font-family:'Roboto', sans-serif;
+    text-transform:uppercase;
+    letter-spacing:3px;
+    font-size: 1.3rem;
+    transition:all 0.6s ease-in-out;
+}
+
+.main-header--active{
+    background-color:#000;
+}
+
+.main-header--inactive{
+    transition: all 0.6s ease-in-out;
+    transform:translateY(-100%);
+}
+  
+/* Navigation container */
+.navbar {
+    display: flex;
+    position:relative;
+    flex-direction:row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding:24px 16px;
+    border-bottom:1px solid $dividerLine;
+    transition:all 0.2s ease-in-out;
+}
+
+.navbar--active{
+    padding:10px 16px;
+}
+
+
+
+
+
+
+/* Left part with social media icons */
+.navbar__left{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    width:37.5%;
+}
+
+/* The social media icons */
+.navbar__social-media{
+    display:flex;
+    width:20%;
+    gap:0.8rem;
+    align-items:center;
+    font-size:1.5rem;
+}
+
+
+
+
+/* Navigation logo */
+.navbar__brand {
+    display: flex;
+    justify-content:center;
+    width:25%;
+}
+
+.navbar__brand__link{
+    padding:8px;
+}
+
+.navbar__brand img{
+    width:83px;
+}
+
+
+
+
+/* Navbar right side */
+.navbar__right{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    width:37.5%;
+}
+
+/* Navigation links ul container */
+.navbar__links {
+      display: flex;
+      flex-direction: row;
+      gap:10px;
+}
+
+/* All navbar links separately */
+.navbar__link {
+    position: relative;
+    padding:8px 8px;
+    transition:all 0.2s ease-in-out;
+}
+
+.navbar__link:hover{
+    color:$navLinkHover;
+}
+
+
+.shopping-cart__btn{
+  gap:16px;
+    padding:16.5px 34.5px;
+}
+
+.fa-cart-shopping{
+    position:relative;
+    top:2px;
+}
+/*------------------------------------*\
+  -------------------------------------
+\*------------------------------------*/
+
+
+
+/*------------------------------------*\
+  HAMBURGER NAVIGATION
+\*------------------------------------*/
+.navbar__ham {
+    display: none;
+    stroke: #fff;
+}
+
+/* Hidden menu main full screen container */
+.navbar__hidden {
+    display:none;
+    position: fixed;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: $hiddenNavBackground;
+    z-index: 10;
+}
+
+/* Hidden menu exit button */
+.navbar__hidden__exit {
+    display: block;
+    position: fixed;
+    top: 20px;
+    right: 21px;
+    width: 38px;
+    height: 38px;
+    cursor: pointer;
+    transition: 0.3s transform ease-in-out;
+    z-index:30;
+
+    &:hover {
+      transform: scale(0.8);
+    }
+}
+
+/* Exit icon hidden menu */
+.exit__icon {
+    display: block;
+    position: relative;
+    top: 13px;
+    width: 100%;
+    height: 2px;
+    background: white;
+    transform: rotate(45deg);
+}
+.exit__icon::after{
+    content:"";
+    width:100%;
+    position:relative;
+    display:block;
+    top:0px;
+    height:2px;
+    background:white;
+    transform:rotate(90deg);
+}
+
+/*  Hidden links container */
+.navbar__hidden__links{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+    text-align:center;
+    margin-bottom:32px;
+}
+
+/* Hidden links individually */
+.navbar__hidden__link{
+    display:flex;
+    justify-content:center;
+    padding:16px;
+    font-size:1.5rem;
+    font-family:'Roboto', sans-serif;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    color:#fff;
+}
+
+.navbar__hidden__link:hover{
+    color:$navLinkHover;
+}
+
+/* Hidden social media container */
+.navbar__hidden__social-media{
+    display:flex;
+    flex-direction:row;
+    position:relative;
+    font-size:2.5rem;
+    justify-content:center;
+    padding-top:34px;
+    gap:8px;
+    border-top:1px solid $dividerLine;
+}
+
+/* Hidden social media icons */
+.navbar__hidden__social-media li{
+    padding:16px;
+}
+
+
+/* To show and hide elements */
+.show {
+    display: flex;
+}
+.hide{
+    display:none;
+}
+
+
+
+/*------------------------------------*\
+    MEDIA QUERY FOR BELOW 1202PX
+\*------------------------------------*/
+@media screen and (max-width: 1100px) {
+    /*  Navbar with less height */
+    .navbar {
+        padding:20px 16px;
+    }
+
+    .navbar__link{
+        display:none;
+    }
+
+    .navbar__social-media{
+        display:none;
+    }
+
+    /* Changing distribution of space */
+    .navbar__left{
+        width:40%;
+    }
+    .navbar__brand{
+        width:20%;
+    }
+    .navbar__right{
+        width:40%;
+    }
+
+
+    /*  Ham btn is visible */
+    .navbar__ham {
+        display: flex;
+        width: 40px;
+        height:40px;
+        cursor: pointer;
+    
+        &:hover {
+          stroke: $navLinkHover;
+        }
+      }
+}
+
+
+
+
+/*------------------------------------*\
+    MEDIA QUERY FOR BELOW 800PX
+\*------------------------------------*/
+@media screen and (max-width: 800px) {
+
+    /*  Navbar with less height */
+    .navbar {
+        padding:10px 16px;
+    }
+
+    /* Changing the distribution of space */
+    .navbar__left{
+        width:30%;
+    }
+    .navbar__brand{
+        width:30%;
+    }
+    .navbar__right{
+        width:30%;
+    }
+
+
+    .shopping-cart__btn{
+        padding:16.5px 14.25px;
+        border-radius:50%;
+    }
+    /* Removing the word from cta for more space */
+    .shopping-cart__btn span{
+        display:none;
+    }   
+}

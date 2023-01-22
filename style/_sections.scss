@@ -1,0 +1,594 @@
+// UNIVERSAL CLASSES
+.wrapper {
+  width: 100%;
+  max-width: 1300px;
+  margin:0 auto;
+}
+
+
+/*------------------------*\
+HERO SECTION
+\*------------------------*/
+/* Hero section container */
+.hero-section{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:100vw;
+  height:100vh;
+  z-index:1;
+}
+
+/* Hero Text container */
+.hero-section__text{
+  display:flex;
+  position:relative;
+  flex-direction:column;
+  max-width:696px;
+  text-align:center;
+  align-items:center;
+  top:2vh;
+}
+
+.hero__subheading{
+  color:#fff;
+  text-shadow:0px 0px 4px #000;
+  margin-bottom:12px;
+}
+
+.hero__heading{
+  margin-top:0px;
+  color:#fff;
+  text-shadow:0px 0px 25px rgba(0,0,0,0.5);
+  margin-bottom:30px;
+}
+
+/*------------------------*\
+----------------------------
+\*------------------------*/
+
+
+/*---------------------------*\
+  QUALITY CRATMANSHIP SECTION
+\*---------------------------*/
+/* Full width container */
+.full-width{
+  position:relative;
+  width:100%;
+  margin-top:1px;
+  margin-bottom:1px;
+  padding:168px 0px;
+}
+
+/* The image container */
+.quality-craftmanship__img{
+  position:absolute;
+  top:0px;
+  left:0px;
+  width:50%;
+  height:100%;
+}
+
+// ANIMATION CLASS
+.image-out{
+  opacity:0;
+}
+
+.text-out{
+  opacity:0;
+}
+
+.qc-button-out{
+  opacity:0;
+}
+
+/* The img */
+.quality-craftmanship__img img{
+  height:100%;
+  object-fit:cover;
+}
+
+
+
+.wrapper-reverse {
+  display:flex;
+  flex-direction:row-reverse;
+  max-width:1300px;
+  height:100%;
+  margin:0 auto;
+}
+
+/* The text outer container */
+.quality-craftmanship{
+  display:flex;
+  width:50%;
+}
+
+/* The text inner container */
+.quality-craftmanship__text{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  justify-content:center;
+  width:100%;
+  padding-left:70px;
+}
+
+/* Heading and texts */
+.quality-craftmanship__subheading{
+  margin-bottom:10px;
+  padding-bottom:0px;
+}
+
+.quality-craftmanship__heading{
+  margin-bottom:27px;
+  color:#222222;
+}
+
+.quality-craftmanship__paragraph{
+  margin-bottom:29px;
+}
+/*------------------------*\
+----------------------------
+\*------------------------*/
+
+
+/*------------------------*\
+      REVIEWS SECTION
+\*------------------------*/
+.review{
+  width:100%;
+  padding:118px 16px;
+  background-color:$lightUiInactive;
+}
+
+.review__inner{
+  display:flex;
+  position:relative;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  max-width:1080px;
+  margin: 0 auto;
+}
+
+.review__subheading{
+  margin-bottom:10px;
+}
+
+.review__heading{
+  margin-bottom:24px;
+  color:#222222;
+}
+
+
+
+
+
+.review__track-container{
+  position:relative;
+  display:flex;
+  height:100%;
+  width:600px;
+  overflow:hidden;
+}
+
+.review__track{
+  width:100%;
+  display:flex;
+  // overflow:hidden;
+  transition:all 0.3s ease-in-out;
+  scroll-snap-type: both mandatory;
+}
+
+.review__track--active{
+  overflow-x:scroll;
+}
+
+.review__track::-webkit-scrollbar{display:none;}
+
+.review__content{
+  min-width:600px;
+  text-align:center;
+  margin-bottom:40px;
+  scroll-snap-align: center;
+}
+
+.active{
+  scroll-snap-type: unset;
+}
+
+.review__text{
+  margin-bottom:20px;
+  font-family:'helvetica', sans-serif;
+  font-size:1.8rem;
+}
+
+.review__author{
+  margin-bottom:38px;
+  font-family:'Roboto', sans-serif;
+  font-size:1.5rem;
+  color:$bodyText;
+  font-weight:400;
+}
+
+.review__arrows{
+  display:flex;
+  position:absolute;
+  justify-content:space-between;
+  width:100%;
+}
+
+.review__left-arrow, .review__right-arrow{
+  min-width:50px;
+  background:none;
+}
+
+.disabled-button{
+  pointer-events: none;
+  opacity:0.5;
+}
+/*------------------------*\
+----------------------------
+\*------------------------*/
+
+
+
+/*------------------------*\
+      GALLERY SECTION
+\*------------------------*/
+/* Main container */
+.gallery{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  padding:100px 16px;
+  gap:40px;
+}
+
+/*  Images container  */
+.gallery__images{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr 1fr;
+  column-gap:20px;
+  row-gap:20px;
+}
+
+.gallery__images img{
+  height:300px;
+  width:100%;
+  object-fit: cover;
+  cursor:pointer;
+  transition:all 0.2s ease-in-out;
+}
+
+.gallery__images img:hover{
+  transform:scale(1.03);
+  box-shadow:0px 0px 15px 5px rgba(0,0,0,0.1);
+}
+
+.gallery__images img:active{
+  transform:scale(1);
+  box-shadow:none;
+}
+
+/*  Fullscreen image container */
+.gallery__fullscreen{
+  display:flex;
+  height:100vh;
+  align-items:center;
+  position:fixed;
+  background:rgba(0,0,0,0.9);
+  top:0;
+  left:0;
+  opacity:1;
+  z-index:20;
+}
+
+.hide-gallery{
+  opacity:0;
+  z-index:-10;
+}
+
+.gallery__fullscreen__container{
+  display:flex;
+  flex-direction:column;
+}
+/*------------------------*\
+----------------------------
+\*------------------------*/
+
+
+
+
+/*------------------------*\
+          FOOTER
+\*------------------------*/
+/*  Footer main container  */
+.footer{
+  background:url(../gallery/footer-background.png),linear-gradient(rgba(0,0,0,1), rgba(0,0,0,1));
+  background-size:cover;
+  background-position:center;
+  padding-bottom:60px;
+  padding-top:60px;
+}
+
+/* Footer inner container */
+.footer__inner{
+  display:flex;
+  position:relative;
+  flex-direction:column;
+  align-items:center;
+}
+
+.footer__logo{
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  width:100%;
+  gap:10px;
+  margin-bottom:40px;
+}
+
+.footer-logo-line{
+  display:flex;
+  width:100%;
+  height:1px;
+  border-bottom:1px solid $dividerLine;
+}
+
+
+/* Footer container for all links */
+.footer__links{
+  display:flex;
+  justify-content:space-between;
+  width:100%;
+  max-width:860px;
+  gap:20px;
+  margin-bottom:25px;
+}
+
+/* The main footer groups */
+.footer__group{
+  display:flex;
+  flex-direction:column;
+  width:25%;
+  gap:40px;
+}
+
+.footer__group__heading{
+  color:#fff;
+}
+
+/* The container for the specific links */
+.footer__group nav{
+  display:flex;
+  flex-direction:column;
+}
+
+/* All the links individually */
+.footer__link{
+  color:rgba(255,255,255,0.8);
+  transition:color 0.2s ease-in;
+  font-family:'Roboto',sans-serif;
+  font-size:1.3rem;
+  letter-spacing:3px;
+  margin-bottom:20px;
+  opacity:0.8;
+  text-transform:uppercase;
+}
+
+.footer__link:hover{
+  color:#fff;
+}
+
+/* Container with social media icons */
+.footer__social-media__icons{
+ display:flex;
+ gap:15px;
+}
+
+/* Footer copyright text */
+.footer__copyright{
+  max-width:368px;
+  font-size:1.3rem;
+  text-align:center;
+  margin-bottom:53px;
+}
+/*------------------------*\
+----------------------------
+\*------------------------*/
+
+
+
+
+
+/*------------------------*\
+  MEDIA QUERY BELOW 1300
+\*------------------------*/
+@media screen and (max-width: 1100px) {
+  /* Main wrapper */
+  .wrapper{
+    padding-right:  16px;
+    padding-left: 16px;
+  }
+
+  /* Reverse wrapper in quality craftmanship */
+  .wrapper-reverse {
+    padding:0px 16px;
+  }
+}
+
+
+
+/*------------------------*\
+  MEDIA QUERY BELOW 800
+\*------------------------*/
+
+@media screen and (max-width: 800px) {
+  /* Row becomes column on small screen */
+  .row{
+    display:flex;
+    flex-direction:column;
+  }
+
+
+
+
+  /* HERO SECTION */
+  .hero-section{
+    height:86vh;
+    width:100%;
+  }
+
+  /* Bit lower on mobile */
+  .hero-section__text{
+    top:2.5vh;
+  }
+
+  /* Decreasing text shadows on mobile */
+  .hero__heading{
+    text-shadow:0px 0px 10px rgba(0,0,0,0.15);
+  }
+  .hero__subheading{
+    color:#fff;
+    text-shadow:0px 0px 2px rgba(0,0,0,0.5);
+    margin-bottom:12px;
+  }
+
+
+
+
+  /* QUALITY CRAFTMANSHIP SECTION */
+  .full-width{
+    display:flex;
+    position:relative;
+    flex-direction:column;
+    margin-top:1px;
+    padding-top:80px;
+    padding-bottom:0px;
+    gap:40px;
+  }
+
+  /* The image container */
+  .quality-craftmanship__img{
+    position:relative;
+    width:100%;
+    height:100%;
+    order:2;
+  }
+
+  /* The text outer container */
+  .quality-craftmanship{
+    width:100%;
+  }
+
+  /* Center elements */
+  .quality-craftmanship__text{
+    padding:0px;
+    max-width:580px;
+    align-items:center;
+  }
+
+  .quality-craftmanship__heading, .quality-craftmanship__subheading{
+    text-align:center;
+  }
+
+  /* Wrapper that starts the element inside from right not left */
+  .wrapper-reverse {
+    display:flex;
+    flex-direction:column;
+    order:1;
+  }
+
+
+
+  /* GALLERY SECTION */
+  
+
+
+
+
+  /* REVIEW SECTION */
+  .review__inner{
+    gap:24px;
+  }
+
+  .review__track-container{
+    max-width:100%;
+  }
+
+  .review__content{
+    min-width:100%;
+    margin-bottom:0px;
+  }
+
+  /* Arrows centered between author and button */
+  .review__author{
+    margin-bottom:0px;
+  }
+
+  /* We change arrows from absolute, so it is back in place */
+  .review__arrows{
+    display:none;
+  }
+ 
+  .review__slider--indicators{
+    display:flex;
+    width:100%;
+    align-items:space-between;
+    gap:5px;
+    justify-content:center;
+  }
+
+  .indicator{
+    width:30px;
+    height:4px;
+    border-radius:2px;
+    display:flex;
+    background:white;
+  }
+
+  .indicator--active{
+    background:#D4B254;
+  }
+
+  .indicator--inactive{
+    background:white;
+  }
+
+
+
+  /*GALLERY SECTION*/
+  /* Container layout change */
+  .gallery__images{
+    grid-template-columns:1fr 1fr;
+  }
+ 
+
+  /* FOOTER SECTION */
+  .footer__links{
+    flex-wrap:wrap;
+    gap:56px;
+    justify-content:center;
+    text-align:center;
+  }
+  
+  .footer__group{
+    width:25%;
+    min-width:200px;
+    align-items:center;
+  }
+
+  .footer__copyright{
+    margin-top:53px;
+  }
+
+  /* Wrapper with smaller padding on mobile */
+  .wrapper{
+    padding-left:16px;
+    padding-right:16px;
+  }
+  
+}
+

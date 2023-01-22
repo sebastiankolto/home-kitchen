@@ -1,0 +1,206 @@
+@import "variables";
+@import "sections";
+@import "navbar";
+@import "slideshow";
+//Create different scss to divide styles, creat a file inside styles with name _anyname.scss and import it here like this.
+
+ /*------------------------*\
+   MAIN CLASSES
+ \*------------------------*/
+
+// CSS RESET
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face{
+  font-family:'helveticaBold';
+  src:url(../font-family/Helvetica-Bold-Font.woff) format('woff');
+}
+
+@font-face{
+  font-family:'helvetica';
+  src:url(../font-family/Helvetica.woff) format('woff');
+}
+
+// Set basic font size
+html {
+  font-size: 62.5%;
+  // 1rem 10px, 1.4rem 14px
+}
+
+// No scrolling when hidden menus are open
+.mobile-menu-open{
+  overflow:hidden;
+}
+
+// To center the website
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+
+
+img{
+  display:block;
+  max-width:100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  // This removes the basic color of the anchor tag to the default color of font.
+}
+
+button{
+  outline:none;
+  border:none;
+  cursor:pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+h1,h2,h3,h5{
+  font-family:'helveticaBold', sans-serif;
+}
+
+h4{
+  font-family:'helveticaBold', sans-serif;
+  color:#222222;
+}
+
+h1 {
+  font-size: 5.2rem;
+  line-height:111.5%;
+  letter-spacing: -1px;
+}
+
+h2 {
+  font-size: 4.2rem;
+  line-height:124%;
+}
+
+h3 {
+  font-size: 3.2rem;
+  line-height:131%;
+}
+
+h4 {
+  font-size: 2.4rem;
+  line-height:133%;
+}
+
+h5 {
+  font-size: 1.8rem;
+  line-height:144%;
+}
+
+h6{
+  font-family:'Roboto';
+  font-size:1.3rem;
+  text-transform:uppercase;
+  letter-spacing:3px;
+  line-height:138%;
+  color:$highlightButton;
+}
+
+p {
+  font-family:'Roboto', sans-serif;
+  font-size: 1.5rem;
+  line-height: 186%;
+  color:$bodyText;
+  opacity:0.9;
+}
+
+/*------------------------------------*\
+ ---------------------------------------
+\*------------------------------------*/
+
+/*------------------------------------*\
+  BUTTON CLASSES
+\*------------------------------------*/
+
+.btn{
+  display:flex;
+  font-family:'Roboto', sans-serif;
+  text-transform:uppercase;
+  letter-spacing:3px;
+  text-align:center;
+}
+
+.main-btn{
+  background-color:$highlightButton;
+  color:#fff;
+  box-shadow:$highlightButtonShadow;
+  font-size:1.5rem;
+  line-height:133%;
+  border-radius:30px;
+  transition:all 0.2s ease-in-out;
+}
+
+.main-btn--narrow{
+  padding:20px 40px;
+}
+
+.main-btn--large{
+  padding:20px 60px;
+}
+
+.main-btn:hover{
+  background-color:$highlightButtonHover;
+  box-shadow:$highlightButtonShadowHover;
+}
+
+.alt-btn{
+  border-radius:25px;
+  border:1px solid #fff;
+  transition:all 0.2s ease-in-out;
+}
+
+.alt-btn:hover{
+  background-color: #fff;
+  color:$titleText;
+}
+/*------------------------------------*\
+  --------------------------------------
+\*------------------------------------*/
+
+
+
+@media screen and (max-width: 800px) {
+  h1{
+    font-size:3.4rem;
+  }
+  
+  h2{
+    font-size:3rem;
+  }
+
+  h3{
+    font-size:2.6rem;
+  }
+
+  h4{
+    font-size:2.2rem;
+  }
+
+  .main-btn{
+    font-size:1.3rem;
+  }
+
+  // Main button smaller on smaller screen
+  .main-btn--large{
+    padding:20px 40px;
+    border-radius:60px;
+  }
+}
